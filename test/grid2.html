@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .container{
+        display: grid;
+        border: solid 2px;
+        background: rgb(225, 233, 236);
+/*
+        grid-template-rows: 220px 220px;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+*/
+        grid-template-columns: 1fr  1fr 1fr;
+
+    }
+
+   .container > * {
+         border: solid 1px red;
+         margin: 5px;
+         text-align: center;
+         line-height: 1.2em;
+
+
+   }
+   .container  #board{
+   
+    background: rgba(179, 241, 207, 0.2);
+
+   }    
+
+   .container #usta{
+    background: rgba(221, 31, 174, 0.2);
+   }
+
+   .container #tourny{
+    background: rgba(17, 167, 84, 0.2);
+   }
+   .container #fri{
+    background: rgba(167, 164, 20, 0.2);
+   }
+
+   .container #july{
+    background: rgba(230, 27, 71, 0.2);
+
+}
+
+
+@media screen and (min-width: 480px){
+
+    .container{
+        
+       background-color: rgb(143, 189, 229);
+       grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media screen and (min-width:800px)  {
+
+    .container{
+
+        background-color: rgb(196, 227, 255);
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+</style>
+<body>
+    
+
+<div class="container">
+
+    <div id="board"> Board Notes
+        <p>
+
+            The USA Football board of directors are leaders in athletics, medicine, and education. Chaired by retired General Peter Chiarelli, some other members include NFL Commissioner Roger Goodell, Big Ten Commissioner Kevin Warren, Green Bay Packers president and CEO Mark Murphy, and Kelly Mehrtens, executive director of The Trust, which is powered by the NFL Players Association and aims to support NFL players as they live their purpose beyond football.
+            
+        </p>
+
+        
+    </div>
+    <div id="usta"> USTA Action</div>
+    <div id="tourny"> Tournaments
+        <p>
+            The tournament, held in late June and early July,
+            is one of the four annual “Grand Slam” tennis events—along with the Australian,
+            French, and U.S. Opens—and is the only one still played on natural grass.
+            The first Wimbledon championship was held in 1877 on one of the croquet lawns
+            of the All England Croquet and Lawn Tennis Club (since 1882 the All England Lawn Tennis
+             and Croquet Club). In 1884 a women’s championship was introduced at Wimbledon,
+              and the national men’s doubles was transferred there from Oxford.
+
+       </p>
+
+
+
+
+    </div>
+    <div id= "fri"> Friday Clinics
+
+       <p>
+        Our High Performance squash clinics are for players who train 4-6 times per week. Players can be of all ages, they train consistently and aspire to be top in country. Enjoy being part of a group of determined players who train to become the very best!
+       </p>
+     
+
+    </div>
+    <div id= "july"> July Pig-out
+        <p>
+
+            The categories as last year were chicken, ribs, brisket and pulled pork in that order. Each entry in each category is judged for appearance, taste and tenderness. There were six teams competing, a manageable number in terms of how much you can taste and keep track of. (You are not supposed to directly compare one prep against another, but it’s good to have a reference range.)
+
+            Two of the teams were obviously more experienced and were probably neck and neck on most scorecards. One team was aggressive with heat and smoke and broke a few KCBS rules but also scored points for taste and tenderness. The others were newer to the game but I hope they’ll be back because this was an enjoyable and educational experience for us all.
+
+
+        </p>
+
+
+
+    </div>
+    <div id= "nov"> November Dinner
+        <p>
+        A battle for control of a landmark church in San Francisco has ended with a multimillion dollar financial settlement in which Glide Memorial
+        leaves The United Methodist Church but retains the famed 330 Ellis St. building it's been using.
+       
+       The United Methodist California-Nevada Conference will retain control of a $4.5 million trust and receive an extra $1.5 million 
+       from the Glide Foundation “in recognition of the long-term and unique relationship between Glide and The United Methodist Church.”
+       
+       In 1929, Lizzie Glide, a Methodist laywoman, started a trust fund to establish a center to benefit all of San Francisco and 
+       to establish a center for preaching and teaching in conformity with the doctrines of the Methodist Church.
+        </p>
+
+
+    </div>
+     <p>
+
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#navigation{
+    height: 5em;
+    background: rgb(207, 152, 207)
+}
+
+#navigation ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    height: 100%
+
+}
+
+#navigation li{
+    float: left;
+    height: 100%;
+    margin: 0 1em;
+
+}
+
+#navigation a:hover{
+    background: rgb(207, 100, 247);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(149, 205, 231);
+    color: white;
+  }
+
+ #navigation, #navigation ul{
+
+    height: auto;
+ }
+  
+
+#navigation li, #navigation a{
+
+    float: none;
+    display: block;
+    margin: 0;
+    height: auto;
+
+}
+
+#navigation a{
+    width: auto;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+
+}
+
+</style>
+
+<body>
+     <nav id="navigation">
+
+        <ul>
+            <li><a ref="#">Home</li>
+            <li><a ref="#">About</li>
+            <li><a ref="#">USTA</li>
+            <li><a ref="#">Tournamenets</li>
+
+
+
+        </ul>
+     </nav>
+  
+
+    
+</body>
+</html>

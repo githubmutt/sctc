@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Gate Tennis Club</title>
+
+    <link rel="stylesheet" href="css/ggtc_style.css">
+    <link rel="stylesheet" href="css/ggtc_nav.css">
+
+    <!--   taken directly from Loruki Make a responsive Website -->
+    <link rel="stylesheet" href="css/utilities.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script>
+    // Gender checkbox M/F
+    function gClick(which, current){
+        
+        var state;
+
+        if( which == "M"){
+            state = document.getElementById("genderM").checked
+            document.getElementById("genderF").checked = !state
+        }else {
+            state = document.getElementById("genderF").checked
+            document.getElementById("genderM").checked = !state
+        }
+
+    }
+
+    function resClick(which, current){
+        
+        var state;
+        
+        var which;
+        if( which == "Single"){
+            state = document.getElementById("residentSingle").checked
+            document.getElementById("residentFamily").checked = !state
+
+        }else{
+
+            state = document.getElementById("residentFamily").checked
+            document.getElementById("residentSingle").checked = !state
+
+        }
+
+
+    }
+    
+    function nonClick(which, current){
+        
+        var state;
+
+        if( which == "Single"){
+            state = document.getElementById("nonresidentSingle").checked
+            document.getElementById("genderF").checked = !state
+        }else {
+            state = document.getElementById("nonResidentFamily").checked
+            document.getElementById("nonResidentSingle").checked = !state
+        }
+
+    }
+
+
+</script>    
+</head>
+<!--
+https://www.pngwing.com/en/search?q=monster+Avatar
+
+-->
+<style>
+
+
+
+.instructions{
+        display: grid;
+        color: blue;
+        border: 1px solid;
+        background-color: var(--membership-color) ;
+        
+    }
+
+.container{
+        display: grid;
+        border: 1px solid;
+        color: rgb(90, 22, 201);
+        background-color: var(--membership-color) ;
+        
+ }
+
+ .eline{
+    background-color: var(--membership-color) ;
+    border:none;
+    border-bottom: 1px solid black;
+    width: 20%;
+
+}
+
+.eline .eline10{
+   width: 10%;
+}
+
+
+
+
+
+
+ @media screen and (min-width: 480px) and (max-width: 700px) {
+
+.container{
+    
+      color:rgb(110, 20, 20);
+      grid-template-columns: 1fr;
+
+}
+
+ }
+
+ @media screen and (min-width:701px) and (max-width: 1024px) {
+
+.container{
+
+color: rgb(73, 17, 17);
+grid-template-columns: 1fr 1fr;
+
+}
+
+
+
+}
+
+
+</style>
+ <header> 
+
+    <img src="images/ggtc.png" alt="Golden Gate Tennis Club" />
+
+</header>
+<body>
+
+    <nav>
+        <ul class="menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="membership.html">Membership</a></li>
+           <li><a href="avatar.html">Avatar</a></li>
+           <li><a href="events.html">Events</a></li>
+           <li><a href="members.html">Members</a></li>
+           <li><a href="photos.html">Photos</a></li>
+        </ul>
+ </nav>
+         <h1>Membership Application</h1>
+
+
+
+            <div class="instructions">
+
+            <ul>
+             <li> Please completely fill out the application below. Be sure to sign, date it and include payment. </li> 
+             <li> You may submit your SCTC membership by one of the following methods. 
+               <br>
+              <b>Online via Paypal is preferred.  Note that using Paypal does not require an account.</b></li>
+                <ul>
+                  <li> <b>Online via Paypal</b>: Fill out the information and click the Waiver button which will bring up the Paypal button
+                         to submit your application  </li>
+                   <li> <b>Fill in the fields online</b>, sign a printed copy, date it, include payment  and mail in the application.</li>
+                   <li> <b>Print out a copy</b> and write in the information, sign and date it , include payment  and mail in the application. </li>
+           
+                </ul>
+             <li> Membership runs January through December</li>
+             <li> For family memberships, a separate form must be completed for each additional family member.  </li>
+                 <ul>
+                   <li>Each family member must have the same home address.  </li>
+                   <li id="LINE2">In the online application, there is a  $0.99 membership charge for each additional family member. </li>
+                   <li id="LINE3">Fill out the form, and follow the same procedure as for the primary family member.  </li> 
+            </li>
+                 </ul>
+             <li> Mail application and check payable to SCTC to: SCTC PO Box 2645, Santa Clara CA , 95054</li>
+             <li> For any questions or for more information email to memb@sctennisclub.org</li>
+            </ul>
+
+
+           </div>
+
+
+
+         <div class="container">
+
+            <form action="membership/signup.php" method="post">
+                <div>
+                <label for="fname">First Name</label>
+                <input class="eline" id="fname">
+
+                <label for="lname">Last Name</label>
+                <input type="text" class="eline" id="lname"><label for="lname"></label>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> <label for="gender">M</label>
+                    <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> <label for="gender">F</label>
+                </div>
+
+                <div>
+                    <label for="ntrp">NTRP</label>
+                    <input type="text" class="eline" id="ntrp"><label for="ntrp"></label>
+                    (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
+                </div>
+
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" class="eline" id="address"><label for="address"></label>
+                </div>
+
+                <div>
+                    <label for="address">City</label>
+                    <input type="text" class="eline" id="city"><label for="city"></label>
+                </div>
+
+                <div>
+                    <label for="address">Contact Phone</label>
+                    <input type="text" class="eline" id="phone"><label for="phone"></label>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" class="eline" id="email"><label for="phone"></label>
+                </div>
+
+                <div>
+                    <label for="email">USTA Team/Captain's Name</label>
+                    <input type="text" class="eline" id="team"><label for="team"></label>/
+                    <input type="text" class="eline" id="captain"><label for="captain"></label>
+
+                </div>
+
+
+                <div>
+                    <fieldset>
+                    <label for="mtype">Membership type: Mark the appropriate membership type</label>
+                    <br>
+                    
+                    Santa Clara Resident &nbsp;
+                    <input type="checkbox" id="residentSingle" name="res" onClick="resClick('Single',this)"> Single - $30</label>
+                    <input type="checkbox" id="residentFamily"  name="res" onClick="resClick('Family',this)"> Family - $30</label>
+                    <input type="checkbox" id="residentJunior"  name="res" onClick="resClick('Junior',this)"> Jrs(under 16) - $10</label>
+<p>
+                    Non-Resident &nbsp;
+                    <input type="checkbox" id="nonresidentSingle" name="non" onClick="nonClick('Single',this)"> Single - $35</label>
+                    <input type="checkbox" id="nonresidentFamily"  name="non" onClick="nonClick('Family',this)">Family - $45</label>
+                    <input type="checkbox" id="nonresidentJunior"  name="nonf" onClick="nonClick('Junior',this)"> Jrs(under 16) - $12.50</label>
+                </fieldset>
+
+                </div>
+
+                <input type="checkbox" id="waiver" name="waiver" >WAIVER:
+                <p>
+                By checking this box, and submitting this application to Santa Clara Tennis Club, the signee above hereby agrees to
+                indenmnify and hold harmless the City of Santa Clara and the Santa Clara Tennis Club from and aainst any and all liabilities
+                for any injury which may be incurred bly the undersigned arising out of, or in any way conneted in any event sponsored
+                by the aforenamed.
+               </p>
+                Signature:
+                <input type="text" class="eline" id="signature" name="sig">
+                Date:
+                <input type="text" class="eline" id="date" name="sigdate">
+
+
+
+            </form>
+
+
+
+
+        </div>
+
+        <footer>
+
+        Golden Gate Tennis Club  &bull; &copy 2022 2412 Nancy Pelosi Drive, San Francisco, CA
+     </footer>
+</body>
+</html>

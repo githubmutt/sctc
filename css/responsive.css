@@ -1,0 +1,51 @@
+
+:root{
+    --blue: rgb(136, 136, 243);
+    --primary-color2: rgb(101, 135, 204); 
+
+}
+
+
+.languages .flex{
+    flex-wrap: wrap;
+}
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+}
+
+
+.showcase{
+
+    height: 700px;
+    background-color: var(--primary-color2);
+    color: white;
+    position: relative;
+
+}
+.showcase .grid{
+    
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+
+    overflow: visible;   /* make scroll bar go away  see .showcase-form  height: 350px (above) */
+
+}
+
+.showcase-form {
+
+    position: relative;
+    top: 60px;
+    height: 350px;    /* this causes scroll bar to appear*/
+
+    width: 400px;
+    padding: 40px;
+
+
+ /*
+    height: 350px; 
+    z-index: 100;  
+    animation: slideInFromRight 1s ease-in;
+ */   
+}

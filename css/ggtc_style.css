@@ -1,0 +1,181 @@
+
+@charset "utf-8";
+
+:root{
+        --blue: rgb(136, 136, 243);
+        --primary-color: #80a0e4; 
+
+        --membership-color: rgb(219, 219, 248);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+body{
+/*
+    
+    font-family: Gotham , "Helvetica Neue", Helvetica, Arial, "san-serif";
+
+    width: 90%;
+    min-width  : 600px; 
+    display: grid;
+    grid-template-columns: 200px auto 200px; 
+    grid-template-areas: "header header header"
+                         "link link link "
+                         "nav main side"
+                         "nav coupons side"
+                         "footer footer footer";
+    grid-gap: 10px 25px;
+
+  */
+    font-family: 'Lato', sans-serif;
+    color: #333;
+ /*   background-color: var(--primary-color); re-check why needed roger */
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(23, 23, 23);
+
+}
+
+/* menu bar */
+.menu{
+    display:flex;
+    background-color: rgb(110, 152, 189);
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(23, 23, 23);
+
+}
+
+.menu > li {
+    flex: 1;
+    list-style: none;        /* remove dots roger */
+
+}
+
+
+
+
+
+.navbar{
+
+    background-color: var(--primary-color);
+    color: rgb(187, 64, 64);
+    height: 80px;
+
+}
+
+.navbar .flex{
+
+    justify-content: space-between;
+}
+
+
+.navbar ul{
+    display:flex;         /* moves horizontal */
+    list-style: none        /* remove dots roger */
+
+}
+
+.navbar a{
+
+    color: #f3ecec;
+    padding: 10px;  /* space between links */
+    margin: 0 5px;
+
+}
+
+.navbar a:hover{
+
+    border-bottom: 2px rgb(221, 13, 13) solid;
+    border-bottom: 2px var(--link-hover) solid;
+}
+
+header { grid-area: header;}
+nav.horizontal { grid-area: link;}
+
+header img {
+    display: block;
+    width: 100%;
+ }
+
+
+
+ footer { grid-area: footer;}
+
+ footer {
+    text-align: center;
+    color: white;
+    background-color:rgba(154,20,23,1.00);   
+    background-color: rgb(123, 50, 218);
+    background-color: var(--blue);
+    font-size: 1em;
+    height: 30px;
+    line-height: 30px;
+    
+    
+ }
+
+ /* Media Query  */
+
+
+
+ @media screen and (min-width: 480px) and (max-width: 700px) {
+
+
+    body {
+        background-color: rgb(94, 128, 173);
+        color: white;
+      }
+
+
+    .menu{
+        flex-wrap: wrap;
+        height: 200px ;
+    }
+
+    .menu > li{
+        flex-basis: 100%
+    }
+
+}
+
+@media screen and (min-width:701px) and (max-width: 1024px) {
+          body {
+            background-color: rgb(153, 159, 238);
+            color: rgb(255, 255, 255);
+          }
+
+
+          .menu{
+            flex-wrap: wrap;
+            height: 200px;
+        }
+    
+        .menu > li{
+            flex-basis: 100%
+        }
+        
+          .home{
+            background-color: rgb(135,130,200);
+          
+            width: 25%;
+        
+          }
+        
+          .home .card{
+            flex: 1;
+        
+          }
+
+        }
+

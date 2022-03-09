@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--
+    https://www.w3schools.com/Css/tryit.asp?filename=trycss_mediaqueries_ex1
+-->
+<style>
+.home{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.home .card{
+    text-align: center;
+    background-color: rgb(144, 144, 240);
+    margin: 18px 10px 40px;
+    flex: 1;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: rgb(135, 135, 238);
+    color: white;
+  }
+
+  .home{
+    background-color: rgb(135,130,200);
+  
+    width: 25%;
+
+  }
+
+  .home .card{
+    flex: 1;
+
+  }
+
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(149, 205, 231);
+    color: white;
+  }
+
+  .languages{
+    flex-direction: column;
+  
+}
+
+
+
+}
+
+
+</style>
+
+
+    <body>
+        <section class="home">
+        <div class="card">
+            <h1>Upcoming Events</h1>
+            <p>Deploy web apps of all kinds, from large scale enterprise
+                APIs to static websites for individual.  Fill out the form to 
+                try out a demo of our platform
+            </p>
+            </div> 
+
+            <div class="card">
+                <h1>USTA Matches</h1>
+                <p>Leagues
+                </p>
+                </div>    
+
+        <div class="card">
+            <h1>Interclub</h1>
+            <p>Deploy web apps of all kinds, from large scale enterprise
+                APIs to static websites for individual.  Fill out the form to 
+                try out a demo of our platform
+            </p>
+            </div>         
+
+        <div class="card">
+            <h1>Friday Mixers</h1>
+            <p>Deploy web apps of all kinds, from large scale enterprise
+                APIs to static websites for individual.  Fill out the form to 
+                try out a demo of our platform
+            </p>
+            </div>                  
+        </section>
+
+    </body>
+</html>
