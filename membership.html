@@ -75,12 +75,34 @@ https://www.pngwing.com/en/search?q=monster+Avatar
 .instructions{
         display: grid;
         color: blue;
+        margin: 5px;
         border: 1px solid;
         background-color: var(--membership-color) ;
         width: auto;
         
-    }        
+    }   
 
+.membership{
+    display: grid;
+    background-color: var(--membership-color) ;   
+    border: 1px solid;
+    margin: 5px;
+    color: rgb(90, 22, 201);
+    width: auto;
+
+}
+ .container {
+ 
+        display: grid;
+        border: 1px solid;
+        margin: 2px;
+        color: rgb(90, 22, 201);
+        background-color: var(--membership-color) ;
+        width: auto;
+
+  }
+
+ 
 
 h1.instructions{
     font-size: 3.5em;
@@ -105,14 +127,13 @@ blockquote::first-letter{
 }
 
 
-.container{
-        display: grid;
-        border: 1px solid;
-        color: rgb(90, 22, 201);
-        background-color: var(--membership-color) ;
-        width: auto;
-        width: 1700px;
+
+
+ fieldset{
+     width: auto;
+
  }
+
 
  .eline{
     background-color: var(--membership-color) ;
@@ -142,27 +163,24 @@ blockquote::first-letter{
 
 
 
- @media screen and (min-width: 480px) and (max-width: 700px) {
+ @media screen and (min-width: 375px) and (max-width: 767px) {
 
-.container{
-    
+    .membership{
       color:rgb(110, 20, 20);
       grid-template-columns: 1fr;
 
-}
+    }
 
  }
 
  @media screen and (min-width:701px) and (max-width: 1024px) {
 
-.container{
+    .membership{
 
-color: rgb(73, 17, 17);
-grid-template-columns: 1fr 1fr;
+    color: rgb(73, 17, 17);
+    grid-template-columns: 1fr;
 
-}
-
-
+    }
 
 }
 
@@ -243,7 +261,10 @@ grid-template-columns: 1fr 1fr;
              </blockquote>
         </div>
 
-         <div class="container">
+
+
+
+         <div class="membership">
 
             <form action="membership/signup.php" method="post">
                 <div>
@@ -300,14 +321,14 @@ grid-template-columns: 1fr 1fr;
                     <br>
                     
                     Santa Clara Resident &nbsp;
-                    <input type="checkbox" id="resSingle" name="res" onClick="rClick('resSingle',this)"> Single - $30</label>
-                    <input type="checkbox" id="resFamily"  name="res" onClick="rClick('resFamily',this)"> Family - $30</label>
-                    <input type="checkbox" id="resJunior"  name="res" onClick="rClick('resJunior',this)"> Jrs(under 16) - $10</label>
+                    <input type="checkbox" id="resSingle" name="res" onClick="rClick('resSingle',this)"> Single $30</label>
+                    <input type="checkbox" id="resFamily"  name="res" onClick="rClick('resFamily',this)"> Family $30</label>
+                    <input type="checkbox" id="resJunior"  name="res" onClick="rClick('resJunior',this)"> Jrs(under 16) $10</label>
 <p>
                     Non-Resident &nbsp;
-                    <input type="checkbox" id="nonSingle" name="non" onClick="rClick('nonSingle',this)"> Single - $35</label>
-                    <input type="checkbox" id="nonFamily"  name="non" onClick="rClick('nonFamily',this)">Family - $45</label>
-                    <input type="checkbox" id="nonJunior"  name="nonf" onClick="rClick('nonJunior',this)"> Jrs(under 16) - $12.50</label>
+                    <input type="checkbox" id="nonSingle" name="non" onClick="rClick('nonSingle',this)"> Single  $35</label>
+                    <input type="checkbox" id="nonFamily"  name="non" onClick="rClick('nonFamily',this)">Family  $45</label>
+                    <input type="checkbox" id="nonJunior"  name="nonf" onClick="rClick('nonJunior',this)"> Jrs(under 16)  $12.50</label>
                 </fieldset>
 
                 </div>

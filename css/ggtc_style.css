@@ -129,7 +129,7 @@ header img {
 
 
 
- @media screen and (min-width: 480px) and (max-width: 700px) {
+ @media only screen and (min-width: 375px) and (max-width: 767px) {
 
 
     body {
@@ -149,7 +149,7 @@ header img {
 
 }
 
-@media screen and (min-width:701px) and (max-width: 1024px) {
+@media only screen and (min-width:768px) and (max-width: 1024px) {
           body {
             background-color: rgb(153, 159, 238);
             color: rgb(255, 255, 255);
