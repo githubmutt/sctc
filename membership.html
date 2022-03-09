@@ -30,39 +30,37 @@
 
     }
 
-    function resClick(which, current){
-        
+/*
+    id="residentSingle"
+    id="residentFamily"
+    id="residentJunior"
+
+    id="nonresidentSingle
+    id="nonresidentFamily"
+    id="nonresidentJunior"
+  */            
+        function rClick(which,current){
         var state;
+        var other;
         
-        var which;
-        if( which == "Single"){
-            state = document.getElementById("residentSingle").checked
-            document.getElementById("residentFamily").checked = !state
+        // get the state of the box checked (could be on/off)
+        state = document.getElementById(which).checked
 
-        }else{
+        // set all to false
+        document.getElementById("resSingle").checked = false
+        document.getElementById("resFamily").checked = false
+        document.getElementById("resJunior").checked = false
+        document.getElementById("nonSingle").checked = false
+        document.getElementById("nonFamily").checked = false
+        document.getElementById("nonJunior").checked = false
 
-            state = document.getElementById("residentFamily").checked
-            document.getElementById("residentSingle").checked = !state
+        // re-set the box  that was checked (could be on/off)
+        document.getElementById(which).checked = state
 
-        }
 
 
     }
     
-    function nonClick(which, current){
-        
-        var state;
-
-        if( which == "Single"){
-            state = document.getElementById("nonresidentSingle").checked
-            document.getElementById("genderF").checked = !state
-        }else {
-            state = document.getElementById("nonResidentFamily").checked
-            document.getElementById("nonResidentSingle").checked = !state
-        }
-
-    }
-
 
 </script>    
 </head>
@@ -79,15 +77,41 @@ https://www.pngwing.com/en/search?q=monster+Avatar
         color: blue;
         border: 1px solid;
         background-color: var(--membership-color) ;
+        width: auto;
         
-    }
+    }        
+
+
+h1.instructions{
+    font-size: 3.5em;
+    line-height: 0em;
+
+}
+
+
+.instructions > h1 {
+        font-family: Helvetica, Arial, sans-serif;
+        letter-spacing: 0.1em;
+        font-size: 2em;
+}
+
+blockquote{
+        color: rgb(85, 17, 212);
+        font-size: 1.1em
+}
+
+blockquote::first-letter{
+        font-size: 1.5em;
+}
+
 
 .container{
         display: grid;
         border: 1px solid;
         color: rgb(90, 22, 201);
         background-color: var(--membership-color) ;
-        
+        width: auto;
+        width: 1700px;
  }
 
  .eline{
@@ -103,7 +127,18 @@ https://www.pngwing.com/en/search?q=monster+Avatar
 }
 
 
+@media print{
 
+    .hidden{
+        visibility: hidden;
+
+    }
+
+    .instructions{
+        visibility: hidden;
+        display: none;
+    }
+}
 
 
 
@@ -151,11 +186,10 @@ grid-template-columns: 1fr 1fr;
         </ul>
  </nav>
          <h1>Membership Application</h1>
-
-
-
+<!--
             <div class="instructions">
 
+                <h1>Instructions</h1>
             <ul>
              <li> Please completely fill out the application below. Be sure to sign, date it and include payment. </li> 
              <li> You may submit your SCTC membership by one of the following methods. 
@@ -182,8 +216,32 @@ grid-template-columns: 1fr 1fr;
 
 
            </div>
+        -->
+        <div class="instructions">
+        
+            <blockquote>
+                Please fill out the application below and submit your Santa Clara Tennis Club application. Membership runs January through December.  Online payment is preferred using Paypal.  Note that using
+                Paypal does not require an account.  After your membership is submitted the membership page will be updated with
+                your membership.
+                <!--&mdash; <cite>Arthur O’Shaughnessy, Poems of Arthur O’Shaughnessy</cite>-->
+             </blockquote> 
+             <blockquote>
+                 For family memberships, a separate form must be completed for each additional family member. Each family member
+                 must have the same home address.  When you fill out the application for the first family member, remember
+                 the home address that you use.  In the online application, there is a $0.99 member charge for each additional family
+                 member.   Fill out the form and follow the same procedure as for the primary family member.
+             </blockquote>
 
+             <blockquote>
+                 Note that the club is required to have a Santa Clara resident majority of 50% + 1.   Therefore at certain
+                 times of the year, membership will be restricted to Santa Clara residents.   
 
+             </blockquote>
+             <blockquote>
+                
+
+             </blockquote>
+        </div>
 
          <div class="container">
 
@@ -242,14 +300,14 @@ grid-template-columns: 1fr 1fr;
                     <br>
                     
                     Santa Clara Resident &nbsp;
-                    <input type="checkbox" id="residentSingle" name="res" onClick="resClick('Single',this)"> Single - $30</label>
-                    <input type="checkbox" id="residentFamily"  name="res" onClick="resClick('Family',this)"> Family - $30</label>
-                    <input type="checkbox" id="residentJunior"  name="res" onClick="resClick('Junior',this)"> Jrs(under 16) - $10</label>
+                    <input type="checkbox" id="resSingle" name="res" onClick="rClick('resSingle',this)"> Single - $30</label>
+                    <input type="checkbox" id="resFamily"  name="res" onClick="rClick('resFamily',this)"> Family - $30</label>
+                    <input type="checkbox" id="resJunior"  name="res" onClick="rClick('resJunior',this)"> Jrs(under 16) - $10</label>
 <p>
                     Non-Resident &nbsp;
-                    <input type="checkbox" id="nonresidentSingle" name="non" onClick="nonClick('Single',this)"> Single - $35</label>
-                    <input type="checkbox" id="nonresidentFamily"  name="non" onClick="nonClick('Family',this)">Family - $45</label>
-                    <input type="checkbox" id="nonresidentJunior"  name="nonf" onClick="nonClick('Junior',this)"> Jrs(under 16) - $12.50</label>
+                    <input type="checkbox" id="nonSingle" name="non" onClick="rClick('nonSingle',this)"> Single - $35</label>
+                    <input type="checkbox" id="nonFamily"  name="non" onClick="rClick('nonFamily',this)">Family - $45</label>
+                    <input type="checkbox" id="nonJunior"  name="nonf" onClick="rClick('nonJunior',this)"> Jrs(under 16) - $12.50</label>
                 </fieldset>
 
                 </div>
@@ -277,7 +335,7 @@ grid-template-columns: 1fr 1fr;
 
         <footer>
 
-        Golden Gate Tennis Club  &bull; &copy 2022 2412 Nancy Pelosi Drive, San Francisco, CA
+        Santa Clara Gate Tennis Club  &bull; &copy 2022 12 Hayward Drive Drive, Santa Clara, CA
      </footer>
 </body>
 </html>
