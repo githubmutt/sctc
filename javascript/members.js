@@ -126,6 +126,6 @@ var tableHTML = "<table id='membershipTable'> \
 //  staticMethod()
     var data
    
-    $.getJSON( "http://www.sctennisclub.org/membership/test_header.php" ,data, success )
+    $.getJSON( "https://www.sctennisclub.org/membership/test_header.php" ,data, success )
 
     
