@@ -197,7 +197,7 @@ blockquote::first-letter{
 
 
 
- @media screen and (min-width: 275px) and (max-width: 767px) {
+ @media screen and (min-width: 375px) and (max-width: 767px) {
 
 
     .membership .instructions{
@@ -299,18 +299,6 @@ blockquote::first-letter{
         </div>
 
 
-        <div class="rating">
-            <div>
-                <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> M
-                <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> F
-            </div>
-            <div>
-                <label for="ntrp">NTRP</label>
-                <input type="text" class="eline5" id="ntrp"><label for="ntrp"></label>
-                (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
-            </div>
-
-        </div>
 
          <div class="membership">
 
@@ -323,15 +311,22 @@ blockquote::first-letter{
                 <input type="text" class="eline" id="lname"><label for="lname"></label>
 
                 </div>
-                <div>
-                    <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> <label for="gender">M</label>
-                    <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> <label for="gender">F</label>
+
+                <div class="rating">
+                    <div>
+                        <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> M
+                        <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> F
+                    </div>
+                    <div>
+                        <label for="ntrp">NTRP</label>
+                        <input type="text" class="eline5" id="ntrp"><label for="ntrp"></label>
+                        (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
+                    </div>
+        
                 </div>
-                <div>
-                    <label for="ntrp">NTRP</label>
-                    <input type="text" class="eline" id="ntrp"><label for="ntrp"></label>
-                    (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
-                </div>
+
+
+
                 <div>
                     <label for="address">Address</label>
                     <input type="text" class="eline" id="address"><label for="address"></label>
