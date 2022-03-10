@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Gate Tennis Club</title>
 
-    <link rel="stylesheet" href="css/ggtc_style.css">
-    <link rel="stylesheet" href="css/ggtc_nav.css">
+    <link rel="stylesheet" href="css/sctc_style.css">
+    <link rel="stylesheet" href="css/sctc_nav.css">
 
     <!--   taken directly from Loruki Make a responsive Website -->
     <link rel="stylesheet" href="css/utilities.css"> 
@@ -107,6 +107,14 @@ https://www.pngwing.com/en/search?q=monster+Avatar
     font-family: 'Lato', sans-serif;
     font-size: 1.30em;
 }
+
+.rating{
+    display: grid;
+    background-color: var(--membership-color) ;  
+    grid-template-columns: 1fr 5fr;
+
+
+}
  .container {
  
         display: grid;
@@ -159,8 +167,18 @@ blockquote::first-letter{
 
 }
 
-.eline .eline10{
-   width: 10%;
+.eline10{
+    background-color: var(--membership-color) ;
+    border:none;
+    border-bottom: 1px solid black;
+     width: 10%;
+}
+
+.eline5{
+    background-color: var(--membership-color) ;
+    border:none;
+    border-bottom: 1px solid black;
+    width: 5%;
 }
 
 
@@ -179,12 +197,13 @@ blockquote::first-letter{
 
 
 
- @media screen and (min-width: 375px) and (max-width: 767px) {
+ @media screen and (min-width: 275px) and (max-width: 767px) {
 
-    .membership{
+
+    .membership .instructions{
       color:rgb(110, 20, 20);
       grid-template-columns: 1fr;
-      background-color: brown;
+      background-color: var(--mobile-membership-color);
 
     }
 
@@ -192,12 +211,12 @@ blockquote::first-letter{
 
  @media screen and (min-width:768px) and (max-width: 1024px) {
 
-    .membership{
+    .membership .instructions{
 
     color: rgb(73, 17, 17);
     grid-template-columns: 1fr;
-    background-color: bisque;
-
+    background-color: var(--mobile-membership-color);
+    
     }
 
 }
@@ -280,7 +299,18 @@ blockquote::first-letter{
         </div>
 
 
+        <div class="rating">
+            <div>
+                <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> M
+                <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> F
+            </div>
+            <div>
+                <label for="ntrp">NTRP</label>
+                <input type="text" class="eline5" id="ntrp"><label for="ntrp"></label>
+                (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
+            </div>
 
+        </div>
 
          <div class="membership">
 
