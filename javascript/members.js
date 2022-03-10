@@ -72,7 +72,7 @@ var tableHTML = "<table id='membershipTable'> \
 
     function success(data ){
 
-    var tableHTML = "<table id='membershipTable'> \
+    var tableHTML = "<table class='sortable' id='membershipTable'> \
     <caption>2022 Membership List</caption>   \
            <tr>                                 \
        <th>First Name</th>                     \
@@ -80,6 +80,18 @@ var tableHTML = "<table id='membershipTable'> \
        <th>NTRP</th>                    \
        <th>DATE</th>                    \
         </tr>"
+
+        tableHTML = "<table class='sortable' id='membershipTable'> \
+            <thead>\
+               <tr>                                 \
+           <th>First Name</th>                     \
+           <th>Last Name</th>                    \
+           <th>NTRP</th>                    \
+           <th>DATE</th>                    \
+            </tr>                       \
+            </thead>"
+    
+
 
         var value, tempHTML=""
         var year,epoch,fname,lname,ntrp,address,zip,email
@@ -96,7 +108,7 @@ var tableHTML = "<table id='membershipTable'> \
             email = value['email']+"@"+value['url']
 
             
-            console.log(key , year , epoch , fname, lname, ntrp, address,zip,email)
+ //           console.log(key , year , epoch , fname, lname, ntrp, address,zip,email)
             tempHTML += "<tr>"
             tempHTML += "<td>" + year + "</td>"
             tempHTML += "<td>" + fname+ "</td>"
