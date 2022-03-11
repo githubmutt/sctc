@@ -94,7 +94,7 @@ var tableHTML = "<table id='membershipTable'> \
 
 
         var value, tempHTML=""
-        var year,epoch,fname,lname,ntrp,address,zip,email
+        var year,y,dt,epoch,fname,lname,ntrp,address,zip,email
         for( var key in data ){
             value = data[key]
 
@@ -107,13 +107,17 @@ var tableHTML = "<table id='membershipTable'> \
             zip = value['zip']
             email = value['email']+"@"+value['url']
 
+            dt = new Date(parseInt(epoch) * 1000)
+            y = dt.getMonth()  + "/" + dt.getDate() + "/" + dt.getFullYear()
             
+            console.log( y )
  //           console.log(key , year , epoch , fname, lname, ntrp, address,zip,email)
             tempHTML += "<tr>"
-            tempHTML += "<td>" + year + "</td>"
+            
             tempHTML += "<td>" + fname+ "</td>"
             tempHTML += "<td>" + lname+ "</td>"
             tempHTML += "<td>" + ntrp+ "</td>"
+            tempHTML += "<td>" + y + "</td>"
             tempHTML += "</tr>"
 
         }
@@ -126,6 +130,6 @@ var tableHTML = "<table id='membershipTable'> \
 //  staticMethod()
     var data
    
-    $.getJSON( "https://www.sctennisclub.org/membership/test_header.php" ,data, success )
+    $.getJSON( "https://www.sctennisclub.org/membership/test_header.php?year=2022" ,data, success )
 
     

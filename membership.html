@@ -176,7 +176,7 @@ blockquote::first-letter{
 
  fieldset{
      width: auto;
-
+     margin: 5px 0  5px 0;
  }
 
 
@@ -230,7 +230,7 @@ blockquote::first-letter{
         visibility: hidden;
         display: none;
     }
-    
+
     .membership{
         font-size: 18px;
     }
@@ -346,17 +346,17 @@ blockquote::first-letter{
             <form action="membership/signup.php" method="post">
                 <div>
                 <label for="fname">First Name</label>
-                <input class="eline" id="fname">
+                <input class="eline" id="fname" required>
 
                 <label for="lname">Last Name</label>
-                <input type="text" class="eline" id="lname"><label for="lname"></label>
+                <input type="text" class="eline" id="lname" required><label for="lname"></label>
 
                 </div>
 
                 <div class="rating">
                     <div>
-                        <input type="checkbox" id="genderM" name="M" onClick="gClick('M',this)"> M
-                        <input type="checkbox" id="genderF" name="F" onClick="gClick('F',this)"> F
+                        <input type="checkbox" id="genderM" name="gender[]"  onClick="gClick('M',this)"> M
+                        <input type="checkbox" id="genderF" name="gender[]"  onClick="gClick('F',this)"> F
                     </div>
                     <div>
                         <label for="ntrp">NTRP</label>
@@ -370,18 +370,18 @@ blockquote::first-letter{
 
                 <div>
                     <label for="address">Address</label>
-                    <input type="text" class="eline" id="address"><label for="address"></label>
+                    <input type="text" class="eline" id="address" required><label for="address"></label>
                 </div>
 
                 <div class="city">
                     <div>
                         <label for ="city">City
-                        <input type="text" class="eline50" id="city">
+                        <input type="text" class="eline50" id="city" required>
                        </label>
                     </div>
                     <div>
                         <label for="zip">Zip
-                        <input type="text" class="eline50" id="zip">
+                        <input type="text" class="eline50" id="zip" required>
                         </label>
                     </div>
                 </div>
@@ -392,7 +392,7 @@ blockquote::first-letter{
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" class="eline" id="email"><label for="phone"></label>
+                    <input type="text" class="eline" id="email" required><label for="phone"></label>
                 </div>
                 <div>
                     <label for="email">USTA Team/Captain's Name</label>
@@ -404,19 +404,19 @@ blockquote::first-letter{
                     <label for="mtype">Membership type: Mark the appropriate membership type</label>
                     <br>
                     Santa Clara Resident &nbsp;
-                    <input type="checkbox" id="resSingle" name="res" onClick="rClick('resSingle',this)"> Single $30</label>
+                    <input type="checkbox" id="resSingle" name="res"  onClick="rClick('resSingle',this)"> Single $30</label>
                     <input type="checkbox" id="resFamily"  name="res" onClick="rClick('resFamily',this)"> Family $30</label>
                     <input type="checkbox" id="resJunior"  name="res" onClick="rClick('resJunior',this)"> Jrs(under 16) $10</label>
                     <p>
                     Non-Resident &nbsp;
-                    <input type="checkbox" id="nonSingle" name="non" onClick="rClick('nonSingle',this)"> Single  $35</label>
+                    <input type="checkbox" id="nonSingle" name="non"  onClick="rClick('nonSingle',this)"> Single  $35</label>
                     <input type="checkbox" id="nonFamily"  name="non" onClick="rClick('nonFamily',this)">Family  $45</label>
-                    <input type="checkbox" id="nonJunior"  name="nonf" onClick="rClick('nonJunior',this)"> Jrs(under 16)  $12.50</label>
+                    <input type="checkbox" id="nonJunior"  name="non" onClick="rClick('nonJunior',this)"> Jrs(under 16)  $12.50</label>
                 </fieldset>
 
                 </div>
 
-                <input type="checkbox" id="waiver" name="waiver" >WAIVER:
+                <input type="checkbox" id="waiver" name="waiver" required >WAIVER:
                 <p>
                 By checking this box, and submitting this application to the Santa Clara Tennis Club, the signee above hereby agrees to
                 indenmnify and hold harmless the City of Santa Clara and the Santa Clara Tennis Club from and against any and all liabilities
