@@ -21,7 +21,11 @@
     <!-- Loruki -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
 
+    <script src="javascript/membership.js" defer ></script>
+
 <script>
+    
+
     // Gender checkbox M/F
     function gClick(which, current){
         
@@ -36,6 +40,16 @@
         }
 
     }
+
+
+    // Handle when form is submitted 
+    function onSubmit( ){
+
+        console.log("onSubmit Alert")
+        alert("onSubmit")
+
+    }
+
 
 /*
     id="residentSingle"
@@ -189,29 +203,20 @@ blockquote::first-letter{
 
 }
 
-.eline50{
-    background-color: var(--membership-color) ;
-    border:none;
-    border-bottom: 1px solid black;
-    margin-left: 1em;
+.length5{
+    width: 5%;
+}
+
+.length10{
+    width:10%;
+}
+
+.length50{
     width: 50%;
 }
 
-.eline10{
-    background-color: var(--membership-color) ;
-    border:none;
-    border-bottom: 1px solid black;
-    margin-left: 1em;
-    width: 10%;
-}
 
-.eline5{
-    background-color: var(--membership-color) ;
-    border:none;
-    border-bottom: 1px solid black;
-    margin-left: 1em;
-    width: 5%;
-}
+
 
 
 @media print{
@@ -343,13 +348,14 @@ blockquote::first-letter{
 
          <div class="membership">
 
-            <form action="membership/signup.php" method="post">
+<!--            <form action="membership/signup.php" method="post">  -->
+            <form id="membershipform" >
                 <div>
-                <label for="fname">First Name</label>
-                <input class="eline" id="fname" required>
+                <label for="fname" value="Rafa">First Name</label>
+                <input class="eline" id="fname" notrequired>
 
-                <label for="lname">Last Name</label>
-                <input type="text" class="eline" id="lname" required><label for="lname"></label>
+                <label for="lname" value="Nadal">Last Name</label>
+                <input type="text" class="eline" id="lname" notrequired><label for="lname"></label>
 
                 </div>
 
@@ -360,7 +366,7 @@ blockquote::first-letter{
                     </div>
                     <div>
                         <label for="ntrp">NTRP</label>
-                        <input type="text" class="eline5" id="ntrp"><label for="ntrp"></label>
+                        <input type="text" class="eline length5" id="ntrp"><label for="ntrp"></label>
                         (2.5/3.0/3.5/4.0/4.5/5.0) (optional)
                     </div>
         
@@ -370,18 +376,18 @@ blockquote::first-letter{
 
                 <div>
                     <label for="address">Address</label>
-                    <input type="text" class="eline" id="address" required><label for="address"></label>
+                    <input type="text" class="eline" id="address" notreq ><label for="address"></label>
                 </div>
 
                 <div class="city">
                     <div>
                         <label for ="city">City
-                        <input type="text" class="eline50" id="city" required>
+                        <input type="text" class="eline length50" id="city" notreq>
                        </label>
                     </div>
                     <div>
                         <label for="zip">Zip
-                        <input type="text" class="eline50" id="zip" required>
+                        <input type="text" class="eline length50" id="zip" notreq>
                         </label>
                     </div>
                 </div>
@@ -392,7 +398,7 @@ blockquote::first-letter{
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" class="eline" id="email" required><label for="phone"></label>
+                    <input type="text" class="eline" id="email" notrequired><label for="phone"></label>
                 </div>
                 <div>
                     <label for="email">USTA Team/Captain's Name</label>
@@ -416,7 +422,7 @@ blockquote::first-letter{
 
                 </div>
 
-                <input type="checkbox" id="waiver" name="waiver" required >WAIVER:
+                <input type="checkbox" id="waiver" name="waiver" notrequired >WAIVER:
                 <p>
                 By checking this box, and submitting this application to the Santa Clara Tennis Club, the signee above hereby agrees to
                 indenmnify and hold harmless the City of Santa Clara and the Santa Clara Tennis Club from and against any and all liabilities
@@ -429,7 +435,7 @@ blockquote::first-letter{
                 <input type="text" class="eline" id="date" name="sigdate">
 
                <div class="submit">
-               <input type="submit" >
+               <input type="submit"  onsubmit = " onSubmit()" >
                 </div>
             </form>
 
