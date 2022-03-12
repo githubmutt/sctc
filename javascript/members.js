@@ -127,7 +127,9 @@ var tableHTML = "<table id='membershipTable'> \
 
     }
 
-//  staticMethod()
+
+
+    //  staticMethod()
     var data
    
     $.getJSON( "https://www.sctennisclub.org/membership/test_header.php?year=2022" ,data, success )
