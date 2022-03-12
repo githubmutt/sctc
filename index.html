@@ -34,18 +34,21 @@
 
         @media only screen and (min-width: 375px) and (max-width: 767px) {
             .home{
-                    background-color: rgb(135,130,200);
+                    background-color: rgb(245, 236, 240);
                     width: 100%;
                 }
 
-
+            .holly{
+                    background-color: var(--primary-color);
+            }
 
         }
         
         @media only screen and (min-width:768px) and (max-width: 1024px) {
           .home{
-            background-color: rgb(135,130,200);
+            background-color: rgb(29, 121, 240);
             flex-direction: column;
+            width: 100%
 
           }
         
@@ -90,29 +93,20 @@
 
 .holy{
        display: flex;
+       margin: 5px;
+
        flex-direction: column;
+       background-color: (--primary-color);
        justify-content: space-between;
        height: 100%;
 
-   }
-   
-
-   cheader{
-    background-color: rgb(131, 165, 236);
-    flex: 0 0 auto;
-    height: 5vh;
-    text-align: center;
-
-    
-   }
-
+    }
       
    .content-body{
         display:flex;        
         flex: 2fr 5fr 2fr;
         flex: auto;
        flex-direction: row;
-       
 
 
    }
@@ -124,8 +118,8 @@
        flex-wrap: wrap;
        flex: 1;
        width: 70%;
-
    }
+
    .content-body .left{
 
        /*
@@ -133,6 +127,7 @@
         */
         order: -1;
         background:rgb(129, 131, 223);
+       background-color: var(--primary-color);
        overflow: auto;
        flex-direction: column;
        border-width: 1px;
@@ -150,23 +145,26 @@
         width: 30%;
    }
 
-
+   cheader{
+    
+    flex: 0 0 auto;
+    height: 5vh;
+    text-align: center;
+    background-color: var(--primary-color); 
+    font-size: 2em;
+    margin: auto;
+        
+   }
 
    main{
-       background:rgb(129, 131, 223);
+       background:rgb(121, 121, 233);
 
        flex:2;
        order:2;
-       min-height: 25vh;
-
-       border: 1px rgb(17, 17, 19);
-       border-color:black;
+       /*min-height: 25vh;*/
        overflow: auto;
        flex-wrap: wrap;
-/*
-       width: 50%;
-       height: 20%;
-*/
+
 
    }
 
@@ -177,34 +175,24 @@
 
    }
 
- /*
-   .left{
-       order: 1;
-       flex:1;
-       background-color: rgb(79, 189, 233);
-       width: 25%;
-       height: 100%;
-   }
-   .right{
-        order: 3;
-        flex: 1;
-        background-color: rgb(35, 216, 223);
-        width:20%;
-        height:100%;
-
-   }
-
- */
+ bold{
+     font-size: 1.7em;
+ }
 
 </style>
 
 
-<div class="holy"></div>
+<div class="holy">
 
-    <cheader> Santa Clara Tennis Club</cheader>   
+    <cheader> Santa Clara Tennis Club</cheader>       
+
     <div class="content-body">
+
+
         <div class="content">
-        <main> <img src="icons/tennis13.png" width="73px"/>
+        <main> 
+            <bold>Information for prospective members</bold>
+            <img src="icons/robot.png" width="50px"/>
             <p>
             Brian Griese is leaving the broadcast booth to become the 49ers' new quarterbacks coach, according to ESPN's Adam Schefter. Griese, a former NFL quarterback who spent 11 seasons with the Buccaneers, Dolphins and Bears, has been with ESPN since 2009. 
                 Griese has history with 49ers head coach Kyle Shanahan, who was on the Buccaneers' coaching staff during Griese's two seasons in Tampa. 
@@ -219,23 +207,12 @@
     
                 Griese is coming to San Francisco at a pivotal moment in franchise history. Shanahan is expected to turn the offense over to second-year quarterback Trey Lance, who split his two starts as a rookie while appearing in six regular season games. The 49ers are expected to move on from quarterback Jimmy Garoppolo, who won 33 of his 47 regular season starts for San Francisco. 
             </p>            
-            
-            
-        </main>        
-        <main> <img src="icons/robot.png" width="73px"/>
 
-            <p>Players will be selected (and alternates will be ordered) in the order their names appear on the most recently published National Standings
-                 List of the division as the time selections are made. For players and teams with a tie, a blind draw will be utilized both for selection and alternate standings, including players without any points. 
-                  Ranking report will be pulled on Wednesday, December 1st for selection.
-
-                Doubles teams will be selected using the most recently published individual doubles National Standing List of the Division at the time selections are made.
-                 Teams will be seeded in the order of their combined individual standings (For example, Player A holds the #1 standing and Player B holds the #10 standing. The Team of A&B would have the combined standing of 11). If there is a tie, the team with the player that has the highest individual doubles standing on the list must be seeded in the higher position. If a player has no standing, for the purpose of determining the combined standing, this player will be assigned a standing one lower than the last player on the individual doubles National Standing List.
-            </p>       
-        
-        
         </main>        
+
+
         <main> 
-
+            <bold>Santa Clara Tennis Club Member Benefits</bold>
             <img src="icons/winner.png" width="73px"/>
             <p>Pasadena City College provides the San Gabriel Valley with a high quality, innovative and dynamic learning environment that inspires student success.
                  Each semester we offer academic programs that encompass degrees, transfer programs, and certificates, to 29,200+ students.
@@ -247,10 +224,25 @@
                  We are recognized educators, experienced staff, and caring counselors. We offer an opportunity for students to transfer to top schools or to find new careers.
                   We are achievers, impactors, and innovators. We break barriers. We are proud, bold and strong. We are all here with one goal: to be great.
             </p>    
-        
-        
-        
         </main>        
+
+        <main>
+            <bold>Santa Clara Tennis Center Reservations</bold>
+            <img src="icons/winner.png" width="73px"/>
+            <p>Pasadena City College provides the San Gabriel Valley with a high quality, innovative and dynamic learning environment that inspires student success.
+                 Each semester we offer academic programs that encompass degrees, transfer programs, and certificates, to 29,200+ students.
+    
+                We are new students and returning students. We are local, international, and online. We span many cultures — LGBT, multicultural,
+                 veterans, and everyone else in between.
+                
+                We are science and math, liberal arts, music and art, athletics, nursing and vocational arts.
+                 We are recognized educators, experienced staff, and caring counselors. We offer an opportunity for students to transfer to top schools or to find new careers.
+                  We are achievers, impactors, and innovators. We break barriers. We are proud, bold and strong. We are all here with one goal: to be great.
+            </p>    
+
+        </main> 
+
+
         </div>    
 
         <div class="left">

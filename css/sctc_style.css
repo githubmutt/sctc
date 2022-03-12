@@ -30,14 +30,17 @@ body{
 
   */
     font-family: 'Lato', sans-serif;
+    background-color: var(--primary-color);
     color: #333;
  /*   background-color: var(--primary-color); re-check why needed roger */
     line-height: 1.6;
+
 }
 
 a{
     text-decoration: none;
     color: rgb(23, 23, 23);
+    
 
 }
 
@@ -141,7 +144,7 @@ header img {
 
     .menu{
         flex-wrap: wrap;
-        height: 200px ;
+        height: 230px ;
     }
 
     .menu > li{
@@ -159,7 +162,7 @@ header img {
 
           .menu{
             flex-wrap: wrap;
-            height: 200px;
+            height: 230px;
         }
     
         .menu > li{
