@@ -29,8 +29,32 @@
             margin: 18px 10px 40px;
             flex: 1;
         }
+
+
+
+        @media only screen and (min-width: 375px) and (max-width: 767px) {
+            .home{
+                    background-color: rgb(135,130,200);
+                    width: 100%;
+                }
+
+
+
+        }
         
-    
+        @media only screen and (min-width:768px) and (max-width: 1024px) {
+          .home{
+            background-color: rgb(135,130,200);
+            flex-direction: column;
+
+          }
+        
+          .home .card{
+            flex-direction: column;
+            flex: 1;
+          }
+
+        }    
         
         </style>
 
@@ -55,64 +79,251 @@
                <li><a href="photos.html">Photos</a></li>
             </ul>
      </nav>
-
-
-
 <!--  ******************************************************** --> 
-<section class="home">
-    <div class="card">
-        <h1>Upcoming News</h1>
-        <img src="icons/racquet5.png" width="73px"/>            
+<!--  
+    https://riptutorial.com/css/example/9484/holy-grail-layout-using-flexbox
+    https://www.developerdrive.com/holy-grail-layout-flexbox/
 
-        <p>Brian Griese is leaving the broadcast booth to become the 49ers' new quarterbacks coach, according to ESPN's Adam Schefter. Griese, a former NFL quarterback who spent 11 seasons with the Buccaneers, Dolphins and Bears, has been with ESPN since 2009. 
-            Griese has history with 49ers head coach Kyle Shanahan, who was on the Buccaneers' coaching staff during Griese's two seasons in Tampa. 
+-->
 
+<style>
+
+.holy{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       height: 100%;
+
+   }
+   
+
+   cheader{
+    background-color: rgb(131, 165, 236);
+    flex: 0 0 auto;
+    height: 5vh;
+    text-align: center;
+
+    
+   }
+
+      
+   .content-body{
+        display:flex;        
+        flex: 2fr 5fr 2fr;
+        flex: auto;
+       flex-direction: row;
+       
+
+
+   }
+   .content-body .content{
+
+       display:flex;
+       flex: 1 1 auto;
+       flex-direction: column;
+       flex-wrap: wrap;
+       flex: 1;
+       width: 70%;
+
+   }
+   .content-body .left{
+
+       /*
+        flex: 0 0 110px; 
+        */
+        order: -1;
+        background:rgb(129, 131, 223);
+       overflow: auto;
+       flex-direction: column;
+       border-width: 1px;
+       width: 20%;
+       
+   }
+
+   .content-body .right{
+        order: 3;
+        flex: 0 0 100px;
+        background:rgb(129, 131, 223);
+        overflow: auto;
+        flex-direction: column;
+        border-width: 3px;
+        width: 30%;
+   }
+
+
+
+   main{
+       background:rgb(129, 131, 223);
+
+       flex:2;
+       order:2;
+       min-height: 25vh;
+
+       border: 1px rgb(17, 17, 19);
+       border-color:black;
+       overflow: auto;
+       flex-wrap: wrap;
+/*
+       width: 50%;
+       height: 20%;
+*/
+
+   }
+
+   ul{
+        display:block;
+        list-style-type: none; 
+        font-size: 1.5em;
+
+   }
+
+ /*
+   .left{
+       order: 1;
+       flex:1;
+       background-color: rgb(79, 189, 233);
+       width: 25%;
+       height: 100%;
+   }
+   .right{
+        order: 3;
+        flex: 1;
+        background-color: rgb(35, 216, 223);
+        width:20%;
+        height:100%;
+
+   }
+
+ */
+
+</style>
+
+
+<div class="holy"></div>
+
+    <cheader> Santa Clara Tennis Club</cheader>   
+    <div class="content-body">
+        <div class="content">
+        <main> <img src="icons/tennis13.png" width="73px"/>
+            <p>
+            Brian Griese is leaving the broadcast booth to become the 49ers' new quarterbacks coach, according to ESPN's Adam Schefter. Griese, a former NFL quarterback who spent 11 seasons with the Buccaneers, Dolphins and Bears, has been with ESPN since 2009. 
+                Griese has history with 49ers head coach Kyle Shanahan, who was on the Buccaneers' coaching staff during Griese's two seasons in Tampa. 
+    
+                
+                Griese, who will celebrate his 47th birthday on March 18, led Michigan to a national championship in 1997. He played ahead of Tom Brady, 
+                who would succeed Griese as Michigan's starting quarterback after Griese was drafted by the Broncos in 1998. As John Elway's backup in Denver, 
+                Griese and his father -- former Dolphins Hall of Fame quarterback Bob Griese -- became the first father-son duo to win Super Bowls. 
+                
+                A Pro Bowler in 2000, Griese compiled a 45-38 record as an NFL starting quarterback. He threw for 19,440 yards with 119 touchdowns against 99 interceptions. 
+                As a member of the Buccaneers, Griese led the NFL with a 69.3 completion percentage in 2004. 
+    
+                Griese is coming to San Francisco at a pivotal moment in franchise history. Shanahan is expected to turn the offense over to second-year quarterback Trey Lance, who split his two starts as a rookie while appearing in six regular season games. The 49ers are expected to move on from quarterback Jimmy Garoppolo, who won 33 of his 47 regular season starts for San Francisco. 
+            </p>            
             
-            Griese, who will celebrate his 47th birthday on March 18, led Michigan to a national championship in 1997. He played ahead of Tom Brady, 
-            who would succeed Griese as Michigan's starting quarterback after Griese was drafted by the Broncos in 1998. As John Elway's backup in Denver, 
-            Griese and his father -- former Dolphins Hall of Fame quarterback Bob Griese -- became the first father-son duo to win Super Bowls. 
             
-            A Pro Bowler in 2000, Griese compiled a 45-38 record as an NFL starting quarterback. He threw for 19,440 yards with 119 touchdowns against 99 interceptions. 
-            As a member of the Buccaneers, Griese led the NFL with a 69.3 completion percentage in 2004. 
+        </main>        
+        <main> <img src="icons/robot.png" width="73px"/>
 
-            Griese is coming to San Francisco at a pivotal moment in franchise history. Shanahan is expected to turn the offense over to second-year quarterback Trey Lance, who split his two starts as a rookie while appearing in six regular season games. The 49ers are expected to move on from quarterback Jimmy Garoppolo, who won 33 of his 47 regular season starts for San Francisco. 
-        </p>
-        </div> 
-
-        <div class="card">
-            <h1>USTA Tournaments</h1>
-            <img src="icons/ball_red.png" width="73px"/>            
             <p>Players will be selected (and alternates will be ordered) in the order their names appear on the most recently published National Standings
                  List of the division as the time selections are made. For players and teams with a tie, a blind draw will be utilized both for selection and alternate standings, including players without any points. 
                   Ranking report will be pulled on Wednesday, December 1st for selection.
 
                 Doubles teams will be selected using the most recently published individual doubles National Standing List of the Division at the time selections are made.
                  Teams will be seeded in the order of their combined individual standings (For example, Player A holds the #1 standing and Player B holds the #10 standing. The Team of A&B would have the combined standing of 11). If there is a tie, the team with the player that has the highest individual doubles standing on the list must be seeded in the higher position. If a player has no standing, for the purpose of determining the combined standing, this player will be assigned a standing one lower than the last player on the individual doubles National Standing List.
+            </p>       
+        
+        
+        </main>        
+        <main> 
+
+            <img src="icons/winner.png" width="73px"/>
+            <p>Pasadena City College provides the San Gabriel Valley with a high quality, innovative and dynamic learning environment that inspires student success.
+                 Each semester we offer academic programs that encompass degrees, transfer programs, and certificates, to 29,200+ students.
+    
+                We are new students and returning students. We are local, international, and online. We span many cultures — LGBT, multicultural,
+                 veterans, and everyone else in between.
+                
+                We are science and math, liberal arts, music and art, athletics, nursing and vocational arts.
+                 We are recognized educators, experienced staff, and caring counselors. We offer an opportunity for students to transfer to top schools or to find new careers.
+                  We are achievers, impactors, and innovators. We break barriers. We are proud, bold and strong. We are all here with one goal: to be great.
+            </p>    
+        
+        
+        
+        </main>        
+        </div>    
+
+        <div class="left">
+        <aside >  <img src="icons/ball_red.png" width="73px"/>     </aside>
+        <aside >  <img src="icons/ball_red.png" width="73px"/>     </aside>
+        <aside >  <img src="icons/ball_red.png" width="73px"/>     </aside>
+        </div>
+        <div class="right">
+        <aside><img src="icons/ball2.png" width="73px"/>     </aside>
+        <aside><img src="icons/ball2.png" width="73px"/>     </aside>
+        <aside><img src="icons/ball2.png" width="73px"/>     </aside>
+        </div>
+     </div>
+
+
+</div>
+
+<!--  ******************************************************** --> 
+<section class="home">
+
+
+    <div class="card">
+        <h1>Upcoming Friday Clinics</h1>
+        <img src="icons/racquet5.png" width="73px"/>            
+        <p>
+            <ul>
+                <li> Friday  April 15, 2022</li>
+                <li> Friday  May 20, 2022</li>
+                <li> Friday  June 18 , 2022</li>
+                <li> Friday  August 19 , 2022</li>
+                <li> Friday September 23, 2022</li>
+ 
+            </ul>
+        </p>
+        </div> 
+
+        <div class="card">
+            <h1>Saturday Mixers</h1>
+            <img src="icons/ball_red.png" width="73px"/>            
+            <p>
+                <ul>
+                    <li> Saturday  March 19, 2022</li>
+                    <li> Saturday  April 16, 2022</li>
+                    <li> Saturday  May 21, 2022</li>
+                    <li> Saturday  June 19 , 2022</li>
+                    <li> Saturday  August 20 , 2022</li>
+                    <li> Saturday September 24, 2022</li>
+                </ul>
             </p>
             </div>    
 
     <div class="card">
-        <h1>PCC</h1>
+        <h1>Board Meetings</h1>
         <img src="icons/tennis2.png" width="100px"/>            
-        <p>Pasadena City College provides the San Gabriel Valley with a high quality, innovative and dynamic learning environment that inspires student success.
-             Each semester we offer academic programs that encompass degrees, transfer programs, and certificates, to 29,200+ students.
-
-            We are new students and returning students. We are local, international, and online. We span many cultures — LGBT, multicultural,
-             veterans, and everyone else in between.
-            
-            We are science and math, liberal arts, music and art, athletics, nursing and vocational arts.
-             We are recognized educators, experienced staff, and caring counselors. We offer an opportunity for students to transfer to top schools or to find new careers.
-              We are achievers, impactors, and innovators. We break barriers. We are proud, bold and strong. We are all here with one goal: to be great.
+        <p>
+            <ul>
+                <li> Thursday  February 17, 2022</li>
+                <li> Thursday  April 21, 2022</li>
+                <li> Thursday  June 16, 2022</li>
+                <li> Thursday  September 15, 2022</li>
+            </ul>
         </p>
         </div>         
-
+<!--
     <div class="card">
         <h1>Better Call Saul returns April 21 </h1>
         <img src="icons/tennis10.png" width="100px"/>    
         <p>He wasn't always Saul Goodman, ace attorney for chemist-turned-meth dealer Walter White. Six years before he begins to represent Albuquerque's most notorious criminal,
              Goodman is Jimmy McGill, a small-time attorney hustling to make a name for himself. He's a forceful champion for his low-income clients, an underdog whose morals and ambitions often clash. Jimmy works with private eye Mike Ehrmantraut, a former Philadelphia cop and recent transplant to the Southwest. 
             Mike has a specialized skill set -- he's a "fixer" of sticky situations -- that Jimmy soon learns to appreciate.
-        </div>                  
+        </div>    
+        
+ -->        
     </section>
 
 
