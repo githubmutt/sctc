@@ -18,6 +18,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        .hero-section{
+
+            background-image: url("images/ggtc.png") , linear-gradient(-45deg , blue, violet );
+        }
+        
+
         .home{
             display: flex;
             flex-wrap: wrap;
@@ -48,13 +54,15 @@
           .home{
             background-color: rgb(29, 121, 240);
             flex-direction: column;
-            width: 100%
+            width: 100%;
+            background-image: url("icons/ball.png") linear-gradient(-45deg , rgb(160, 30, 91), rgb(130, 137, 238) );
 
           }
         
           .home .card{
             flex-direction: column;
             flex: 1;
+
           }
 
         }    
@@ -62,13 +70,15 @@
         </style>
 
 
+
 </head>
 
 <header>
 
-    <img src="images/ggtc.png" alt="Santa Clara Tennis Club" />
+   <img src="images/ggtc.png" alt="Santa Clara Tennis Club" />
+   <hero-section > <img src="images/ggtc.cpng"></hero-section>
 
-</header>
+    </header>
 <body>
 
          <nav>
@@ -99,6 +109,8 @@
        background-color: (--primary-color);
        justify-content: space-between;
        height: 100%;
+
+
 
     }
       
@@ -179,6 +191,22 @@
      font-size: 1.7em;
  }
 
+ .board{
+    display: flex;
+    flex-direction: column;
+    background-color: (--primary-color);
+    background-color: rgb(121, 121, 233);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+
+ }
+ 
+ .board > img{
+   width: 70px;
+
+ }
 </style>
 
 
@@ -260,6 +288,28 @@
 
 </div>
 
+<div class="board">
+    <h1>SCTC Board</h2>
+    <p>
+         <ul>
+            <li>President: Roger Okamoto <img src="icons/board/eagle.png" width="40px"></li>
+            <li>Vice-President: Ken Okazaki<img src="icons/board/cube.png" width="55px"></li>
+            <li>Treasurer: <img src="icons/board/queen_bee.gif" width="35px"></li>
+            <li>Communication Director: Jeanette Hoggart<img src="icons/board/queen_bee.gif" width="35px"></li>
+            <li>USTA: Carrie Bell <img src="icons/board/stanford2.png" width="35px"></li>
+            <li>Social Coordinator: Roy Molseed <img src="icons/board/social.png" width="30px"></li>
+            <li>Social Media: Helen Matsumoto <img src="icons/board/duck.png" width="45px"></li>
+<!--
+https://www.cutout.pro/remove-background/gallery/president
+    https://terraria.fandom.com/wiki/Queen_Bee
+-->
+         </ul> 
+
+    </p>   
+
+
+</div>
+
 <!--  ******************************************************** --> 
 <section class="home">
 
@@ -318,7 +368,11 @@
  -->        
     </section>
 
+   
 
+
+
+ 
 
     <footer>
 
