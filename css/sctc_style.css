@@ -147,7 +147,7 @@ header img {
 
     .menu{
         flex-wrap: wrap;
-        height: 230px ;
+        height: 300px ;
     }
 
     .menu > li{
@@ -165,7 +165,7 @@ header img {
 
           .menu{
             flex-wrap: wrap;
-            height: 230px;
+            height: 300px;
         }
     
         .menu > li{
