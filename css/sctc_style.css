@@ -49,6 +49,8 @@ a{
 .menu{
     display:flex;
     background-color: rgb(110, 152, 189);
+    background-color: var(--primary-color);
+    font-size: 1.8em;
     height: 40px;
     text-align: center;
     margin: auto;
