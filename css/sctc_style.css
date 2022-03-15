@@ -33,7 +33,8 @@ body{
     background-color: var(--primary-color);
     color: #333;
  /*   background-color: var(--primary-color); re-check why needed roger */
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.9
 
 }
 
