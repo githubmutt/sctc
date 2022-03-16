@@ -10,7 +10,18 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+club{
 
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    height: 2.1em;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 2.7em;
+    font-family: 'Petit Formal Script', cursive;
+    
+}
 
 body{
 /*
@@ -37,6 +48,7 @@ body{
     line-height: 1.9
 
 }
+
 
 a{
     text-decoration: none;
@@ -137,7 +149,10 @@ header img {
 
 
  @media only screen and (min-width: 375px) and (max-width: 767px) {
-
+    club .club_image{
+        visibility: hidden;
+        
+    }
 
     body {
         background-color: rgb(94, 128, 173);
@@ -156,11 +171,21 @@ header img {
         flex-basis: 100%
     }
    
+    club .club_image{
+        visibility: hidden;
+        
+    }
 
 }
 
 @media only screen and (min-width:768px) and (max-width: 1024px) {
-          body {
+
+    club .club_image{
+        visibility: hidden;
+        
+    }
+ 
+    body {
             background-color: rgb(153, 159, 238);
             /*color: rgb(255, 255, 255); */
           }

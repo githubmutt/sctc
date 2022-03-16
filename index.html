@@ -80,6 +80,11 @@
 </head>
 
 <header>
+    <club>
+        <div class="club_image"><img src="images/SCTC.png" width="70px"> </div>
+        <div> Santa Clara Tennis Club </div>
+        <div class="club_image"><img src="images/SCTC.png" width="70px"> </div>
+    </club>
 
    <img src="images/ggtc.png" alt="Santa Clara Tennis Club" />
 
@@ -211,15 +216,28 @@
      font-size: 1.7em;
  }
 
+
+
  .board{
     display: flex;
-    flex: 60%;
+    flex-wrap: wrap;
+    text-align:center;
     flex-direction: column;
+    
+    /*
+    flex: 60%;
+    justify-content: center;
+    align-content: center;
+flex-direction: column;
+    */
+    
+    width: 100%;
     background-color: (--primary-color);
     background-color: rgb(121, 121, 233);
     border-radius: 15px;
     
-    justify-content: center;
+
+
     margin: 3px;
 
 
@@ -239,11 +257,9 @@
 
 <div class="holy">
 
-    <cheader> 
-        
-        <!-- <div>Santa Clara Tennis Club </div> -->
-        <div><img src="images/SCTC.png" height="167px"> </div>
-    </cheader>       
+
+
+     
 
     <div class="content-body">
 
