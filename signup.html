@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Clara Tennis Club</title>
+
+    <link rel="stylesheet" href="css/sctc_style.css">
+    <link rel="stylesheet" href="css/sctc_nav.css">
+
+    <!--   taken directly from Loruki Make a responsive Website -->
+    <link rel="stylesheet" href="css/utilities.css"> 
+</head>
+
+<header>
+    <club>
+        <div class="club_image"><img src="images/SCTC.png" width="70px"> </div>
+        <div> Santa Clara Tennis Club </div>
+        <div class="club_image"><img src="images/SCTC.png" width="70px"> </div>
+    </club>
+    <img src="images/events.png"  alt="Golden Gate Tennis Club" />
+
+</header>
+<style>
+    .container{
+        display: grid;
+        border: solid 2px;
+        color: rgb(0, 0, 0);
+        background: rgb(225, 233, 236);
+        /*margin: 50px 5px; */
+        
+
+        grid-template-columns: 1fr 1fr 1fr;
+        
+
+    }
+   .container >ul{
+        list-style-type: none;
+   
+    }
+
+    .container > * {
+         border: solid 1px red;
+         margin: 2px;
+         text-align: center;
+         line-height: 1.2em;
+         color: black;
+
+
+   }
+   .container  #board{
+   
+    background: rgba(179, 241, 207, 0.2);
+
+   }    
+
+   .container #usta{
+    background: rgba(221, 31, 174, 0.2);
+   }
+
+   .container #mixers{
+    background: rgba(101, 238, 47, 0.2);
+   }
+
+   .container #tourny{
+    background: rgba(17, 167, 84, 0.2);
+   }
+   .container #fri{
+    background: rgba(167, 164, 20, 0.2);
+   }
+
+   .container #july{
+    background: rgba(230, 27, 71, 0.2);
+   }
+
+    .container #lifetime{
+        background: rgba(233, 188, 198, 0.2);
+        background-image: url("icons/racquet5.png") , url("icons/ball_red.png");
+        background-image: url("icons/racquet5.png");
+        background-image: url("icons/ball_red.png");
+        
+        background-repeat: no-repeat;
+        background-position:center center;
+        background-size:cover;
+        background-size: contain;
+
+        font-size: 16px;
+        padding: 4px;
+    }
+    
+    .container #lifetime ul{
+        list-style-type: none;
+    }
+
+
+@media screen and (min-width: 480px) and (max-width: 700px) {
+
+.container{
+    
+   background-color: rgb(143, 189, 229);
+   color:rgb(165, 42, 42);
+   grid-template-columns: 1fr;
+
+}
+
+.container > *{
+
+    color: purple;
+}
+
+.container  #board{
+
+        color: red;
+
+
+}
+
+
+}
+
+@media screen and (min-width:701px) and (max-width: 1024px) {
+
+    .container{
+
+    background-color: rgb(196, 227, 255);
+    color: rgb(238, 9, 9);
+    grid-template-columns: 1fr 1fr;
+
+}
+   .container > *{
+       
+       color: rgb(128, 7, 241);
+
+   }
+
+   .container > #tourny{
+        background-color:rgb(194, 207, 145);
+        
+
+   }
+}
+
+
+</style>
+<body>
+
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="events.html">Events</a></li>
+
+            <li><a href="avatar.html">Avatar</a></li>
+
+            
+            <li><a href="members.html">Members</a></li>
+            <li><a href="photos.html">Photos</a></li>
+        </ul>
+ </nav>
+
+
+
+ <div class="container">
+
+
+
+</div>
+
+
+     <footer>
+
+        Santa Clara Gate Tennis Club  &bull; &copy 2022 - 2625 Hayward Drive Drive, Santa Clara, CA
+     </footer>
+</body>
+</html>

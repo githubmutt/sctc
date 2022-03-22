@@ -3,7 +3,7 @@
 
 :root{
         --blue: rgb(136, 136, 243);
-        --primary-color: rgb(106, 106, 235); 
+        --primary-color: rgb(159, 159, 245); 
 
         --membership-color: rgb(190, 190, 245);
         --mobile-membership-color: rgb(235, 134, 181);
@@ -67,7 +67,7 @@ a{
     display:flex;
     background-color: rgb(110, 152, 189);
     background-color: var(--primary-color);
-    font-size: 1.85em;
+    font-size: 1.75em;
     height: 60px;
     text-align: center;
     margin: auto;
