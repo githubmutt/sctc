@@ -23,130 +23,171 @@
 
 </header>
 <style>
-    .container{
-        display: grid;
-        border: solid 2px;
-        color: rgb(0, 0, 0);
-        background: rgb(225, 233, 236);
-        /*margin: 50px 5px; */
-        
 
-        grid-template-columns: 1fr 1fr 1fr;
-        
+  .nav_menu{
+      display: flex;
+      flex-direction: row;
+      font-size: .8em;
+      color:blueviolet;
+      background-color: rgb(214, 196, 255);
 
-    }
-   .container >ul{
-        list-style-type: none;
-   
-    }
+/* 
+     justify-content: space-between;
+*/
 
-    .container > * {
-         border: solid 1px red;
-         margin: 2px;
-         text-align: center;
-         line-height: 1.2em;
-         color: black;
+  }
+  .nav_menu > ul{
+      list-style: none;
+  }
+
+  fieldset{
+        margin: 5px 20x;
+  }
+
+  #clinic {
+
+        font-size: 1em;
+}
+
+.activityform{
+    display: grid;
+    background-color: var(--membership-color) ;   
+    background-color: rgb(238, 132, 203);
+    border: 1px solid;
+    margin: 1px;
+    padding: 10px;
+    color: rgb(90, 22, 201);
+    width: auto;
+
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.30em;
+
+}
+
+.rating{
+    display: grid;
+    background-color: var(--membership-color) ;  
+    grid-template-columns: 3fr 6fr 1fr;
 
 
-   }
-   .container  #board{
-   
-    background: rgba(179, 241, 207, 0.2);
-
-   }    
-
-   .container #usta{
-    background: rgba(221, 31, 174, 0.2);
-   }
-
-   .container #mixers{
-    background: rgba(101, 238, 47, 0.2);
-   }
-
-   .container #tourny{
-    background: rgba(17, 167, 84, 0.2);
-   }
-   .container #fri{
-    background: rgba(167, 164, 20, 0.2);
-   }
-
-   .container #july{
-    background: rgba(230, 27, 71, 0.2);
-   }
-
-    .container #lifetime{
-        background: rgba(233, 188, 198, 0.2);
-        background-image: url("icons/racquet5.png") , url("icons/ball_red.png");
-        background-image: url("icons/racquet5.png");
-        background-image: url("icons/ball_red.png");
-        
-        background-repeat: no-repeat;
-        background-position:center center;
-        background-size:cover;
-        background-size: contain;
-
-        font-size: 16px;
-        padding: 4px;
-    }
-    
-    .container #lifetime ul{
-        list-style-type: none;
-    }
-
+}
 
 @media screen and (min-width: 480px) and (max-width: 700px) {
-
-.container{
-    
-   background-color: rgb(143, 189, 229);
-   color:rgb(165, 42, 42);
-   grid-template-columns: 1fr;
-
-}
-
-.container > *{
-
-    color: purple;
-}
-
-.container  #board{
-
-        color: red;
-
-
-}
 
 
 }
 
 @media screen and (min-width:701px) and (max-width: 1024px) {
 
-    .container{
 
-    background-color: rgb(196, 227, 255);
-    color: rgb(238, 9, 9);
-    grid-template-columns: 1fr 1fr;
-
-}
-   .container > *{
-       
-       color: rgb(128, 7, 241);
-
-   }
-
-   .container > #tourny{
-        background-color:rgb(194, 207, 145);
-        
-
-   }
 }
 
 
 </style>
+<script type="text/javascript">
+
+var clinic , mixer, interclub, tourny , activity,btn
+
+function setup(){
+
+    clinic = document.getElementById("clinic")
+    mixer = document.getElementById("mixer")
+    interclub = document.getElementById("interclub")
+    tourny = document.getElementById("tournament")
+
+    activity = document.getElementById("activity")
+    activity.innerHTML = "<h1>Clinic</h1>"
+    
+    btn = document.getElementById("button")
+    btn.value = "Enter Information for Clinic"   
+
+    console.log("setup")
+}
+
+onload=setup
+
+    // Gender checkbox M/F
+    function gClick(which, current){
+        
+        var state;
+
+        if( which == "M"){
+            state = document.getElementById("genderM").checked
+            document.getElementById("genderF").checked = !state
+        }else {
+            state = document.getElementById("genderF").checked
+            document.getElementById("genderM").checked = !state
+        }
+
+    }
+function onClinic(){
+
+    activity.innerHTML = "<h1>Clinic</h1>"
+    btn.value = "Enter Information for Clinic"    
+
+    clinic.hidden = false
+    mixer.hidden = true
+    interclub.hidden = true
+    tournament.hidden = true
+}
+
+function onMixer(){
+
+    activity.innerHTML = "<h1>Mixer</h1>"
+    btn.value = "Enter Information for Mixer"
+
+    clinic.hidden = true
+    mixer.hidden = false
+    interclub.hidden = true
+    tournament.hidden = true
+
+}
+
+function onInterClub(){
+    activity.innerHTML = "<h1>Interclub</h1>"
+    btn.value = "Enter Information for InterClub"
+
+    clinic.hidden = true
+    mixer.hidden = true
+    interclub.hidden = false
+    tournament.hidden = true
+
+}
+
+function onTournament(){
+    
+    activity.innerHTML = "<h1>Tournament</h1>"
+    btn.value = "Enter Information for Tournament"
+
+    clinic.hidden = true
+    mixer.hidden = true
+    interclub.hidden = true
+    tournament.hidden = false
+
+}
+
+function onSubmit(formData){
+
+    console.log("onSubmit")
+    console.log( formData )
+    var fname="",lname="",genderF="", genderM="",ntrp="",email=""
+    fname = document.getElementById("fname").value
+    lname = document.getElementById("lname").value
+    email = document.getElementById("email").value
+    genderF = document.getElementById("genderF").checked
+    genderM = document.getElementById("genderM").checked
+
+    gender = genderM = true ? "M" : "F:"
+    ntrp = document.getElementById("ntrp").value
+
+    console.log(fname + " " + lname + " " + email + " " + gender + "" + ntrp )
+
+}
+
+</script>
+
 <body>
-
-
-    <nav>
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="activities.html">Activities</a></li>
@@ -159,20 +200,94 @@
             <li><a href="members.html">Members</a></li>
             <li><a href="photos.html">Photos</a></li>
         </ul>
- </nav>
+ 
+ 
+ 
+
+<!--
+ <button onclick="handleClick()">Button </button>
+ <a href="javascript:handleClick()" onclick="handleClick()">ClickHere</a>
+ <p><a href="javascript:handleClick()">Click Here</a></p>
+
+-->
+<nav class="nav_menu">
+   <ul>
+    <li><a class="link" href="javascript:onClinic()">  Clinic</a></li>
+    <li><a class="link" href="javascript:onMixer()">     Mixer</a></li>
+    <li><a class="link" href="javascript:onInterClub()"> Interclub</a></li>
+    <li><a class="link" href="javascript:onTournament()"> Tournament</a></li>
+
+   </ul>
+
+</nav>
+
+<div id="activity" >
+</div>
 
 
+<div >
+    
+    <fieldset>
+    <form id="activityform" >
+        <div>
+            <label for="fname" value="Rafa">First Name</label>
+            <input class="eline" id="fname" notrequired>
 
- <div class="container">
+            <label for="lname" value="Nadal">Last Name</label>
+            <input type="text" class="eline" id="lname" notrequired><label for="lname"></label>
 
+            </div>
 
+            <div class="rating">
+                <div>
+                    <input type="checkbox" id="genderM" name="gender[]"  onClick="gClick('M',this)"> M
+                    <input type="checkbox" id="genderF" name="gender[]"  onClick="gClick('F',this)"> F
+                </div>
+                <div>
+                    <label for="ntrp">NTRP</label>
+                    <input type="text" class="eline length5" id="ntrp"><label for="ntrp"></label>
+                </div>
+    
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="text" class="eline" id="email" notrequired><label for="phone"></label>
+            </div>
+
+            <div >
+                <input type="button" id="button" value="Enter data " onClick = "onSubmit(this.form)" >
+           </div>
+    
+    </form>
+
+    </fieldset>
 
 </div>
 
 
-     <footer>
+<div id="clinic">
 
-        Santa Clara Gate Tennis Club  &bull; &copy 2022 - 2625 Hayward Drive Drive, Santa Clara, CA
+
+</div>
+
+<div id="mixer" >
+</div>
+
+<div id="interclub">
+</div>
+
+<div id="tournament">
+</div>
+
+
+
+
+
+
+<footer>
+
+        Santa Clara Tennis Club  &bull; &copy 2022 - 2625 Hayward  Drive, Santa Clara, CA
      </footer>
 </body>
 </html>
