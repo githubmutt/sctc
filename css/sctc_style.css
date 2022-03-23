@@ -67,7 +67,7 @@ a{
     display:flex;
     background-color: rgb(110, 152, 189);
     background-color: var(--primary-color);
-    font-size: 1.75em;
+    font-size: 1.42em;
     height: 60px;
     text-align: center;
     margin: auto;
