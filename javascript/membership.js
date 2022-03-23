@@ -17,9 +17,10 @@
         lname = document.getElementById("lname").value
 
         //gender = document.getElementById("gender[0]").value
-        genderF = document.getElementById("genderF").value
-        genderM = document.getElementById("genderM").value
+        genderF = document.getElementById("genderF").checked
+        genderM = document.getElementById("genderM").checked
 
+        gender = genderM == true ? "M": "F"        
         ntrp = document.getElementById("ntrp").value
 
         address = document.getElementById("address").value
@@ -31,7 +32,7 @@
         email = document.getElementById("email").value
         phone = document.getElementById("phone").value
 
-        var text = fname + lname  + ntrp + genderM + genderF
+        var text = fname + lname  + gender + ntrp
         var text2 = address + city + zip         
         var text3 = email + phone
 
@@ -39,7 +40,7 @@
         console.log(text2 )                
         console.log(text3 )                
 
-        alert(text )
+       alert(text )
 //        alert(text + "\n" + text2 + "\n" + text3)
 
     }

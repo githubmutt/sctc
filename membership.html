@@ -27,6 +27,7 @@
 
 <script>
     
+    // Handle when form is submitted (membership.js)
 
     // Gender checkbox M/F
     function gClick(which, current){
@@ -44,24 +45,6 @@
     }
 
 
-    // Handle when form is submitted 
-    function onSubmit( ){
-
-        console.log("onSubmit Alert")
-        alert("onSubmit")
-
-    }
-
-
-/*
-    id="residentSingle"
-    id="residentFamily"
-    id="residentJunior"
-
-    id="nonresidentSingle
-    id="nonresidentFamily"
-    id="nonresidentJunior"
-  */            
         function rClick(which,current){
         var state;
         var other;
@@ -79,8 +62,6 @@
 
         // re-set the box  that was checked (could be on/off)
         document.getElementById(which).checked = state
-
-
 
     }
     
