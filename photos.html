@@ -44,6 +44,14 @@
             elements[i].style.display = 'none'
         }
 
+//document.getElementById("nadal").style.display='flex'
+
+    }
+
+    function init(){
+        hideAll()
+        document.getElementById("nadal").style.display='flex'
+
     }
 
     function jClickOFF(thisOBJ){
@@ -65,7 +73,7 @@ function jClick( e ){
 }
 
 
-onload = hideAll;
+onload = init;
 
 </script>
 
