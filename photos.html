@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <header>
@@ -32,37 +35,35 @@
 <script>
 
     function hideAll(){
-        document.getElementById("nadal").style.display='none'
-        document.getElementById("halep").style.display='none'
+//        document.getElementById("nadal").style.display='none'
+//        document.getElementById("halep").style.display='none'
+
+        var elements = document.getElementsByClassName("photo_gallery")
+        for( var i=0 ; i<elements.length; i++){
+
+            elements[i].style.display = 'none'
+        }
 
     }
 
     function jClickOFF(thisOBJ){
-        console.log(thisOBJ)
-//    document.getElementById("photos").style.visiblity='hidden'
-     document.getElementById("obama").style.display='none'
-
- // LIGHTBULB:  https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb        
+     console.log(thisOBJ)
+     document.getElementById("nadal").style.display='none'
         
 }
 
-function jClickNadal(thisOBJ){
-//https://www.w3schools.com/jsref/prop_style_display.asp
-//        document.getElementById("photos").style.visibility='visible' ; //'none'
-        hideAll()
-        console.log( thisOBJ)
-        document.getElementById("nadal").style.display='flex' 
-        
+function jClick( e ){
+    // LIGHTBULB:  https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb        
+    // https://www.w3schools.com/jsref/prop_style_display.asp
+    // document.getElementById("photos").style.visibility='visible' ; //'none'
 
-    }
+    hideAll()
+    console.log("e = " + e)
+    document.getElementById(e).style.display='flex' 
 
-    function jClickHalep(thisOBJ){
 
-        hideAll()
-        console.log( thisOBJ)
-        document.getElementById("halep").style.display='flex'
+}
 
-    }
 
 onload = hideAll;
 
@@ -91,36 +92,31 @@ onload = hideAll;
 <h1>Tennis Gallery</h1>
 <div class="icon_gallery">
 <figure>
-      <a href="javascript:jClickNadal(this)" name="me">
-    <img src="icons/tennis.png" alt="drawing" name="one" />
+      <a href="javascript:jClick( 'nadal')">
+    <img src="icons/tennis.png" alt="drawing" name = "name2" id="p2" >
     <caption>Rafael Nadal</caption>
     </a>
-        
-    </figure>
+ </figure>
 
 
     <figure>
-        <a href="javascript:jClickHalep(this)" >
+        <a href="javascript:jClick('halep')" >
         <img src="icons/tennis4.png" alt="drawing"/>
         <caption>Simona Halep</caption>
         </a>
     </figure>
 
     <figure>
-        <a href="javascript:jClickOFF(this)">
+        <a href="javascript:jClick('novak')">
         <img src="icons/tennis1.png" name="two" />
         <caption>Djokovic</caption>        
        </a>
     </figure>
 
-
-
     <figure>
-        <img src="icons/tennis2.png" onclick="clickOFF(this)" />
+        <img src="icons/tennis2.png" onclick="jClick('fed')" />
         <caption>Federer</caption>
     </figure>
-
-
 
     <figure>
         <img src="icons/tennis3.png" alt="drawing"/>
@@ -143,8 +139,6 @@ onload = hideAll;
         <img src="icons/tennis6.png" alt="drawing"/>
         <caption>Backhand</caption>
         </figure>
-
-
 
     <figure>
         <img src="icons/robot.png" alt="drawing"/>
@@ -190,6 +184,16 @@ onload = hideAll;
     <figure>
         <img src="images/_halep/halep4.jpg" alt="drawing"/>
     </figure>
+
+    <div class="photo_gallery" id="novak">
+
+
+    </div>
+
+    <div class="photo_gallery" id="fed">
+
+
+    </div>
 
 </div>
 
