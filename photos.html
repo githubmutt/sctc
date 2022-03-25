@@ -37,7 +37,7 @@
     function hideAll(){
 //        document.getElementById("nadal").style.display='none'
 //        document.getElementById("halep").style.display='none'
-
+// HTMLElement.hidden = true | false
         var elements = document.getElementsByClassName("photo_gallery")
         for( var i=0 ; i<elements.length; i++){
 
@@ -51,6 +51,14 @@
     function init(){
         hideAll()
         document.getElementById("halep").style.display='flex'
+
+//  This get img id,name if exists ***********
+        var elm = document.getElementsByTagName("img")
+        for( var i=0 ; i<elm.length; i++){
+            if(elm[i].name != "" )
+            console.log( i, elm[i].id  , elm[i].name )
+        }
+// **************************************************
 
     }
 
@@ -100,8 +108,8 @@ onload = init;
 <h1>Tennis Gallery</h1>
 <div class="icon_gallery">
 <figure>
-      <a href="javascript:jClick( 'nadal')">
-    <img src="icons/tennis.png" alt="drawing" name = "name2" id="p2" >
+    <a href="javascript:jClick( 'nadal')">
+    <img src="icons/tennis.png" alt="drawing" name = "rafa" id="rafaID" >
     <caption>Rafael Nadal</caption>
     </a>
  </figure>
@@ -109,14 +117,14 @@ onload = init;
 
     <figure>
         <a href="javascript:jClick('halep')" >
-        <img src="icons/tennis4.png" alt="drawing"/>
+        <img src="icons/tennis4.png" alt="drawing" name="simona" id="simonaID" />
         <caption>Simona Halep</caption>
         </a>
     </figure>
 
     <figure>
         <a href="javascript:jClick('novak')">
-        <img src="icons/tennis1.png" alt="drawing" />
+        <img src="icons/tennis1.png" alt="drawing" name="nole" id="djokerID"/>
         <caption>Djokovic</caption>        
        </a>
     </figure>
