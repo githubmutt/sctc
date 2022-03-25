@@ -14,28 +14,59 @@ h1 {
     text-align: center;
  }
 
- div#gallery {
-    display: flex;
-    flex-flow: row wrap;
- }
- 
- div#gallery figure {
-    flex: 1 1 150px;
-    margin: 5px;
-    border: 1px solid black;
-    background-color:rgb(199, 211, 233);
- }
- 
- div#gallery figure img {
-    display: block;
-    width: 100%;
- }
- 
- div#gallery figure figcaption {
-    display: block;
-    text-align: center;
-    font-size: 0.85em;
-    padding: 3px;
-    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
- }
- 
+/* ICON gallery */
+.icon_gallery {
+   display: flex;
+   flex-flow: row wrap;
+/*   visibility: hidden; */
+}
+
+.icon_gallery figure {
+   flex: 1 1 150px;
+   margin: 5px;
+   border: 1px solid black;
+   background-color:rgb(199, 211, 233);
+}
+
+.icon_gallery figure img {
+   display: block;
+   width: 100%;
+}
+
+.icon_gallery figure figcaption {
+   display: block;
+   text-align: center;
+   font-size: 0.85em;
+   padding: 3px;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+
+
+/* CLASS gallery */
+.photo_gallery {
+   display: flex;
+   flex-flow: row wrap;
+   
+/*   visibility: hidden; */
+}
+
+.photo_gallery figure {
+   flex: 1 1 150px;
+   margin: 5px;
+   border: 1px solid black;
+   background-color:rgb(199, 211, 233);
+}
+
+.photo_gallery figure img {
+   display: block;
+   width: 100%;
+}
+
+.photo_gallery figure figcaption {
+   display: block;
+   text-align: center;
+   font-size: 0.85em;
+   padding: 3px;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
