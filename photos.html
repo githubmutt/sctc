@@ -50,7 +50,7 @@
 
     function init(){
         hideAll()
-        document.getElementById("nadal").style.display='flex'
+        document.getElementById("halep").style.display='flex'
 
     }
 
@@ -63,7 +63,7 @@
 function jClick( e ){
     // LIGHTBULB:  https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb        
     // https://www.w3schools.com/jsref/prop_style_display.asp
-    // document.getElementById("photos").style.visibility='visible' ; //'none'
+    // document.getElementById("photos").style.visibility='visible' ; 
 
     hideAll()
     console.log("e = " + e)
@@ -116,7 +116,7 @@ onload = init;
 
     <figure>
         <a href="javascript:jClick('novak')">
-        <img src="icons/tennis1.png" name="two" />
+        <img src="icons/tennis1.png" alt="drawing" />
         <caption>Djokovic</caption>        
        </a>
     </figure>
@@ -177,6 +177,7 @@ onload = init;
             <img src="images/_nadal/nadal1.jpg" alt="drawing"/>
          </figure>
 
+ 
     </div>
 
     <div class ="photo_gallery" id="halep">
@@ -192,9 +193,26 @@ onload = init;
     <figure>
         <img src="images/_halep/halep4.jpg" alt="drawing"/>
     </figure>
+    </div>
+
 
     <div class="photo_gallery" id="novak">
 
+        <figure>
+            <img src="images/_novak/novak.jpg" alt="drawing"/>
+        </figure>
+        <figure>
+            <img src="images/_novak/novak5.jpg" alt="drawing"/>
+        </figure>
+        <figure>
+            <img src="images/_novak/novak2.jpg" alt="drawing"/>
+        </figure>
+        <figure>
+            <img src="images/_novak/novak3.jpg" alt="drawing"/>
+        </figure>
+        <figure>
+            <img src="images/_novak/novak5.jpg" alt="drawing"/>
+        </figure>
 
     </div>
 
