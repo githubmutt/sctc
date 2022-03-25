@@ -29,7 +29,44 @@
 
 </header>
 
+<script>
 
+    function hideAll(){
+        document.getElementById("nadal").style.display='none'
+        document.getElementById("halep").style.display='none'
+
+    }
+
+    function jClickOFF(thisOBJ){
+        console.log(thisOBJ)
+//    document.getElementById("photos").style.visiblity='hidden'
+     document.getElementById("obama").style.display='none'
+
+ // LIGHTBULB:  https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb        
+        
+}
+
+function jClickNadal(thisOBJ){
+//https://www.w3schools.com/jsref/prop_style_display.asp
+//        document.getElementById("photos").style.visibility='visible' ; //'none'
+        hideAll()
+        console.log( thisOBJ)
+        document.getElementById("nadal").style.display='flex' 
+        
+
+    }
+
+    function jClickHalep(thisOBJ){
+
+        hideAll()
+        console.log( thisOBJ)
+        document.getElementById("halep").style.display='flex'
+
+    }
+
+onload = hideAll;
+
+</script>
 
 
 <body>
@@ -52,45 +89,50 @@
 
 <!--  *********************************************  -->
 <h1>Tennis Gallery</h1>
-<div id="gallery">
+<div class="icon_gallery">
 <figure>
-        <img src="icons/tennis.png" alt="drawing"/>
-        <caption>Rafael Nadal</caption>
+      <a href="javascript:jClickNadal(this)" name="me">
+    <img src="icons/tennis.png" alt="drawing" name="one" />
+    <caption>Rafael Nadal</caption>
+    </a>
+        
+    </figure>
+
+
+    <figure>
+        <a href="javascript:jClickHalep(this)" >
+        <img src="icons/tennis4.png" alt="drawing"/>
+        <caption>Simona Halep</caption>
+        </a>
     </figure>
 
     <figure>
-        <img src="icons/tennis1.png" alt="drawing"/>
+        <a href="javascript:jClickOFF(this)">
+        <img src="icons/tennis1.png" name="two" />
         <caption>Djokovic</caption>        
+       </a>
     </figure>
 
-    <figure>
-        <img src="icons/ball.png" alt="drawing"/>
-        <caption>Green Ball</caption>
-    </figure>
+
 
     <figure>
-        <img src="icons/tennis2.png" alt="drawing"/>
+        <img src="icons/tennis2.png" onclick="clickOFF(this)" />
         <caption>Federer</caption>
     </figure>
+
+
+
     <figure>
         <img src="icons/tennis3.png" alt="drawing"/>
         <caption>Whoops</caption>
     </figure>
 
-    <figure>
-        <img src="icons/tennis4.png" alt="drawing"/>
-        <caption>Simona Halep</caption>
-    </figure>
 
     <figure>
         <img src="icons/doubles.png" alt="drawing"/>
         <caption>Doubles</caption>
     </figure>
 
-    <figure>
-        <img src="icons/ball1.png" alt="drawing"/>
-        <caption>Orange Ball</caption>
-    </figure>
 
     <figure>
         <img src="icons/wheelchair.png" alt="drawing"/>
@@ -98,20 +140,10 @@
     </figure>
 
     <figure>
-        <img src="images/cici.png" alt="drawing"/>
-        <caption>GGTC</caption>
-    </figure>
+        <img src="icons/tennis6.png" alt="drawing"/>
+        <caption>Backhand</caption>
+        </figure>
 
-    <figure>
-        <img src="icons/ball_red.png" alt="drawing"/>
-        <caption>Red Ball</caption>
-    </figure>
-
-
-    <figure>
-        <img src="icons/winner.png" alt="drawing"/>
-        <caption>Winner</caption>
-    </figure>
 
 
     <figure>
@@ -119,30 +151,52 @@
         <caption>A.I.</caption>
      </figure>
 
-     <figure>
-        <img src="icons/tennis6.png" alt="drawing"/>
-        <caption>Backhand</caption>
-        </figure>
-
-     <figure>
-        <img src="images/obama.png" alt="drawing"/>
-        <caption>Obama</caption>
-     </figure>
-
-
-
-
+    <figure>
+        <img src="icons/winner.png" alt="drawing"/>
+        <caption>Winner</caption>
+    </figure>
 
 </div>
-<!--
+ 
 
 
--->
+ 
+ <div class="photo_gallery" id="nadal">
+
+        <figure>
+            <img src="images/_nadal/nadal.jpg" alt="drawing"/>
+        </figure>         <figure>
+            <img src="images/_nadal/nadal2.jpg" alt="drawing"/>
+         </figure>
+         <figure>
+            <img src="images/_nadal/nadal3.jpg" alt="drawing"/>
+         </figure>
+         <figure>
+            <img src="images/_nadal/nadal1.jpg" alt="drawing"/>
+         </figure>
+
+    </div>
+
+    <div class ="photo_gallery" id="halep">
+        <figure>
+            <img src="images/_halep/halep.jpg" alt="drawing"/>
+        </figure>
+         <figure>
+        <img src="images/_halep/halep2.jpg" alt="drawing"/>
+    </figure>
+    <figure>
+        <img src="images/_halep/halep3.jpg" alt="drawing"/>
+    </figure>
+    <figure>
+        <img src="images/_halep/halep4.jpg" alt="drawing"/>
+    </figure>
+
+</div>
 
 <!--  *********************************************  -->
      <footer>
 
-        Golden Gate Tennis Club  &bull; &copy 2022 - 2625 Hayward Dr, Santa Clara, CA
+        Santa Clara Tennis Club  &bull; &copy 2022 - 2625 Hayward Dr, Santa Clara, CA
      </footer>
 </body>
 </html>
